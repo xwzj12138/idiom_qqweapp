@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+﻿# This is a basic workflow to help you get started with Actions
 
 name: CI
 
@@ -18,8 +18,8 @@ jobs:
       env: 
         PLUGIN_VERSION: 1.0.0
         PLUGIN_DESC: CI自动构建上传
-        PLUGIN_APPTOKEN: ${{ secrets.APPTOKEN }}
-        PLUGIN_BUILDUSER: ${{ github.actor }} 
+        PLUGIN_APPTOKEN: fe94b1b3211cb0772125e160276e1d87
+        PLUGIN_BUILDUSER: 13246190524@163.com
         PLUGIN_EXPERIENCE: true 
         #PLUGIN_FIRSTPAGE: pages/index/index
         #PLUGIN_USEPACKAGEJSON: true
