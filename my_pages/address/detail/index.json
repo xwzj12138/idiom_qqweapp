@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "x-input": "/packages/input/index",
+    "x-button": "/packages/button/index"
+  }
+}

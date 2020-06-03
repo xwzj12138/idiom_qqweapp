@@ -1,0 +1,66 @@
+<!-- 用户信息 -->
+<x-cell-group>
+  <x-cell wx:if="{{!userinfo.nickname && !userinfo.avatar}}">
+    <x-button inline openType='getUserInfo' bind:getuserinfo="updateUserInfo" shape='x-circle' size='45' bg_color='x-bg-color8' color='x-color'>授权登录</x-button>
+  </x-cell>
+  <x-cell wx:else title='{{userinfo.nickname}}' label='金币：{{userinfo.gold}}'>
+    <x-avatar size='46' src='{{userinfo.avatar}}' slot='icon'></x-avatar>
+    <x-button slot='footer' shape='x-circle' size='45' bg_color='x-bg-color8' color='x-color' url='/my_pages/product/list/index'>金币兑换</x-button>
+  </x-cell>
+</x-cell-group>
+<!-- 成语信息 -->
+<view class="x-bg-color6 idiom_body">
+  <view><x-button slot='footer' inline shape='x-circle' size='45' bg_color='x-bg-color4' color='x-color'>{{userinfo.integral}}积分</x-button></view>
+  <view class="idiom-item x-flex x-flex-item-center x-text-center x-color">
+    <block wx:for='{{idiom_info.idiom_name}}' wx:key='idiom_name'>
+      <view class="x-file-item">{{item || '?'}}</view>
+    </block>
+  </view>
+</view>
+<!-- 邀请好友或看视频获取金币 -->
+<view class="center_button_body x-flex x-flex-item-center x-file-item">
+  <view class="x-file-item">
+    <x-button size='56' bg_color='x-bg-color1' margin shape color='x-color' open-type="share">求助好友</x-button>
+  </view>
+  <view class="x-file-item">
+    <x-button size='56' bg_color='x-bg-color2' margin shape color='x-color' catchtap="showAd">获取积分</x-button>
+  </view>
+</view>
+<!-- 提示 -->
+<view wx:if='{{show_hint}}' class="x-bg-color8 x-color1 x-margin x-text-center x-font-size">选择错误</view>
+<!-- 答案 -->
+<view class="x-flex x-flex-item-center x-text-center x-color x-bg-color8 answer">
+<block wx:for='{{idiom_info.answer_list}}' wx:key='answer_list'>
+  <view class="x-file-item" data-index="{{index}}" catchtap="selectAnswer">{{item.name}}</view>
+</block>
+</view>
+<ad unit-id="	82690cd458f88341b09edb2d9013ae90" ad-type="card"></ad>
+<!-- <x-cell label='赞助商' ></x-cell>
+<x-grid-group itemNum='2'>
+  <x-grid-item title='摩推' appId='wx98b1ca692984b153' url='/pages/article/list/index' linkType='navigateToMiniProgram' img_url='/static/motui_logo.jpg'></x-grid-item>
+  <x-grid-item title='多多导购' appId='wx7271410f70eb2829' url='/pages/pdd/home/index' linkType='navigateToMiniProgram' img_url='/static/logo.png' ></x-grid-item>
+</x-grid-group> -->
+<x-nav tab-list="{{navList}}"></x-nav>
+<block wx:for='{{rank_user_list.data}}' wx:key='rank_user_list'>
+  <x-cell title='{{item.nickname}}' label='金币：{{item.gold}}' value='答对{{item.idiom_num}}题'>
+    <x-avatar size='46' src='{{item.avatar}}' slot='icon'></x-avatar>
+  </x-cell>
+  <ad wx:if='{{index>0 && index%rank_user_list.ad_number==0}}' unit-id="eee6b1a0709da3d97b308c45b37679b9"></ad>
+</block>
+
+<!-- 弹窗提示 -->
+<x-drawer wx:if='{{show_answer_hint.status}}' type='center' show maskClosable='{{false}}'>
+  <view style="width:600rpx;padding:20px 0 15px 0;" class="x-text-center x-margin">
+    <view><x-icon name='roundcheckfill' size="136" color="#19be6b"></x-icon></view>
+    <view class="x-font-size1 x-margin x-weight">恭喜答题正确</view>
+    <view wx:if='{{show_answer_hint.gold>0}}' class="x-font-size x-margin2">获得{{show_answer_hint.gold}}金币</view>
+    <x-button size='66' bg_color='x-bg-color2' color='x-color' catchtap="closHint">下一题</x-button>
+  </view>
+  <!-- <x-cell label='赞助商' ></x-cell>
+  <x-grid-group itemNum='2'>
+    <x-grid-item title='摩推' appId='wx98b1ca692984b153' url='/pages/article/list/index' linkType='navigateToMiniProgram' img_url='/static/motui_logo.jpg'></x-grid-item>
+    <x-grid-item title='多多导购' appId='wx7271410f70eb2829' url='/pages/pdd/home/index' linkType='navigateToMiniProgram' img_url='/static/logo.png' ></x-grid-item>
+  </x-grid-group> -->
+</x-drawer>
+
+<x-loading icon='' isShow="{{show_loading}}" hint='暂时没有更多的主题了！'></x-loading>

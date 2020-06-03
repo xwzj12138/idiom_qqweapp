@@ -1,0 +1,6 @@
+.userinfo{font-weight: 500;margin:10px 0 3px 0;}
+.userinfo>text:nth-child(2){margin: 0 10px;}
+.userinfo>text:nth-child(3){background: #ff6b4e;border-radius: 5px;color: #fff;font-size: 10px;font-weight: 400;padding: 0 5px;}
+.address{margin-bottom: 10px;}
+.address text{font-size: 11px;margin-right: 3px;}
+page{padding-bottom: 40px;}

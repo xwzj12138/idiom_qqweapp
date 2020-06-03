@@ -1,0 +1,3 @@
+::-webkit-scrollbar {display: none;}
+page{background-color: #f3f3f3;font-family:PingFang SC;}
+page>view{background-color: #fff;}

@@ -1,0 +1,10 @@
+{
+  "onReachBottomDistance": 200,
+  "navigationBarTitleText": "金币兑换商品",
+  "usingComponents": {
+    "x-button": "/packages/button/index",
+    "x-card":"/packages/card/index",
+    "x-tabbar": "/packages/tabbar/index",
+    "x-tabbar-flex-item": "/packages/tabbar-flex-item/index"
+  }
+}

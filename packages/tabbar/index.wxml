@@ -1,0 +1,4 @@
+<!--packages/goods-action/index.wxml-->
+<view class='x-class x-flex {{fixed_type}} {{bg_color}}' >
+  <slot></slot>
+</view>

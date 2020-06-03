@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index/index",
+    "pages/share/help/index",
+    "my_pages/address/list/index",
+    "my_pages/address/detail/index",
+    "my_pages/order/list/index",
+    "my_pages/order/detail/index",
+    "my_pages/product/list/index",
+    "my_pages/product/detail/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "成语挑战",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "debug": false,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于首页的效果展示"
+    }
+  }
+}

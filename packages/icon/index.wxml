@@ -1,0 +1,2 @@
+<!--packages/icon/index.wxml-->
+<view class="icon-item icon-{{name}} {{rotate?'x-rotate':''}}" style='color:{{color}};font-size:{{size}}rpx;'></view>

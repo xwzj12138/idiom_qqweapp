@@ -1,0 +1,17 @@
+/* packages/nav/index.wxss */
+@import '../common/index.wxss';
+.nav {
+  white-space: nowrap;
+  display: flex;
+  height: 100rpx;
+}
+.nav .x-item {
+  height: 90rpx;
+  display: inline-block;
+  line-height: 90rpx;
+  margin: 0 10rpx;
+  padding: 0 20rpx;
+}
+.nav .x-item.cur {
+  border-bottom: 4rpx solid;
+}

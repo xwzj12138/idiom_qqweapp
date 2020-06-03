@@ -1,0 +1,15 @@
+{
+  "onReachBottomDistance": 200,
+  "usingComponents": {
+    "x-grid-group": "/packages/grid-group/index",
+    "x-grid-item": "/packages/grid-item/index",
+    "x-avatar": "/packages/avatar/index",
+    "x-cell-group": "/packages/cell-group/index",
+    "x-cell": "/packages/cell/index",
+    "x-button": "/packages/button/index",
+    "x-loading": "/packages/loading/index",
+    "x-nav": "/packages/nav/index",
+    "x-drawer":"/packages/drawer/index",
+    "x-icon": "/packages/icon/index"
+  }
+}

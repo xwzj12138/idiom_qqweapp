@@ -1,0 +1,13 @@
+<block wx:for='{{data}}' wx:key='product_list'>
+  <x-card type='flex' imgUrl='{{item.image}}' title='{{item.product_name}}' price='{{item.market_price}}'>
+    <view class="x-color15 x-margin">所需金币：{{item.gold}}个</view>
+    <view class="x-color15 x-margin x-flex x-flex-item-center">
+      <view class="x-file-item">库存：{{item.stock}}个</view>
+      <x-button shape='x-circle' size='45' bg_color='x-bg-color8' color='x-color' url='/my_pages/product/detail/index?id={{item.id}}'>金币兑换</x-button>
+    </view>
+  </x-card>
+</block>
+<view style="margin-bottom:50px;"></view>
+<x-tabbar>
+  <x-tabbar-flex-item bg_color='x-bg-color3' title='兑换记录' url='/my_pages/order/list/index' fontSize='56rpx' color='x-color'></x-tabbar-flex-item>
+</x-tabbar>

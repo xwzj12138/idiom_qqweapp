@@ -1,0 +1,28 @@
+<!-- 商品轮播图 -->
+<swiper indicator-dots autoplay style='height:750rpx;'>
+  <swiper-item wx:for="{{product_info.slideshow}}" wx:key='product_slideshow'>
+    <image src="{{item}}" style='width:100%;height:100%;' mode="scaleToFill"/>
+  </swiper-item>
+</swiper>
+<!-- 标题 -->
+<view class="goods_title">{{product_info.product_name}}</view>
+<!-- 价格相关 -->
+<view class="goods_detail_price">
+  <text>原价：{{product_info.market_price}}</text>
+</view>
+<x-cell title="金币：{{product_info.gold}}"/>
+<view class="postage">
+  <text>运费：</text>
+  <text>{{product_info.postage==0?'包邮':'￥'+product_info.postage}}</text>
+</view>
+<!-- 设置收货地址 -->
+<x-cell-group menuCard>
+  <x-cell wx:if='{{default_address==null}}' menuArrow url='/my_pages/address/list/index' title="还没有地址哦"/>
+  <x-cell wx:else menuArrow url='/my_pages/address/list/index' title="{{default_address.consignee_name}}" label='{{default_address.province+default_address.city+default_address.county+default_address.address}}'/>
+  <view class="address_bottom_view"></view>
+  <x-button bg_color='x-bg-color8' color='x-color' size='86' shape='x-circle' catchtap='submit'>确认兑换</x-button>
+</x-cell-group>
+
+<x-nav tab-list="{{nav}}"></x-nav>
+<!-- 商品详情 -->
+<image wx:for='{{product_info.product_detail}}' wx:key='product_detail_image' src="{{item}}" style='width:100%;' mode='widthFix'></image>

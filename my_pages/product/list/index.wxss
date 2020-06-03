@@ -1,0 +1,2 @@
+/* my_pages/product/list/index.wxss */
+@import '../../../packages/common/index.wxss';

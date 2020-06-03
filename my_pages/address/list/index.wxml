@@ -1,0 +1,17 @@
+<x-cell-group>
+  <x-cell wx:for='{{data}}' wx:key='order'>
+    <x-icon slot='icon' name="{{item.is_default==1?'roundcheck':'round'}}" size='46' data-index='{{index}}' catchtap="setDefault"></x-icon>
+    <view data-index='{{index}}' bindtap='goDetail'>
+      <view class='userinfo'>
+        <text>{{item.consignee_name}}</text><text>{{item.consignee_tel}}</text><text wx:if='{{item.is_default==1}}'>默认地址</text>
+      </view>
+      <view class='address'>
+        <text>{{item.province}}</text><text>{{item.city}}</text><text>{{item.county}}</text><text>{{item.address}}</text>
+      </view>
+    </view>
+  </x-cell>
+</x-cell-group>
+<view style="margin-bottom:50px;"></view>
+<x-tabbar>
+  <x-tabbar-flex-item bg_color='x-bg-color3' title='添加地址' url='/my_pages/address/detail/index' fontSize='56rpx' color='x-color'></x-tabbar-flex-item>
+</x-tabbar>

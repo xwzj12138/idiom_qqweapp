@@ -1,0 +1,43 @@
+<!-- 最新物流信息 -->
+<x-cell label="{{data.logistics_information?data.logistics_information.time:''}}">
+  <x-icon slot='icon' name='deliver' color='#24BA85' size="50"></x-icon>
+  <view style="font-size:24rpx;color:#24BA85;">{{data.status>2?data.traces.AcceptStation:'未发货'}}</view>
+</x-cell>
+<!-- 收货地址 -->
+<x-cell label="{{data.consignee_info.city+data.consignee_info.county+data.consignee_info.address}}">
+  <x-icon slot='icon' name='location' color='#FF3939' size="40"></x-icon>
+  <view style="font-size:28rpx;"><text style="margin-right:10px;">{{data.consignee_info.consignee_name}}</text><text>{{data.consignee_info.consignee_tel}}</text></view>
+</x-cell>
+<!-- 商品相关 -->
+<x-cell wx:for='{{data.goods_list}}'  wx:key="{{index}}">
+  <image slot='icon' class="goods_image" src="{{item.image}}"></image>
+  <view class="goods_info">
+    <view class="goods_title">{{item.product_name}}</view>
+    <view style="font-size:30rpx;padding:5px 0 5px 0;">规格：{{item.attr_value}}</view>
+    <view>
+      <text class="goods_price_tag">￥{{item.price}}</text>
+    </view>
+  </view>
+</x-cell>
+<view class="order_info">商品有规格时请联系微信客服：cxx4515</view>
+<!-- 订单信息 -->
+<view class="x-flex order_info">
+  <view>订单号：</view>
+  <view>{{data.out_trade_no}}</view>
+</view>
+<view class="x-flex order_info" wx:if='{{data.status!=2}}'>
+  <view>下单时间：</view>
+  <view>{{data.add_time}}</view>
+</view>
+<view class="x-flex order_info" wx:if='{{data.status!=2}}'>
+  <view>发货时间：</view>
+  <view>{{data.delivery_time==0?'待发货':data.delivery_time}}</view>
+</view>
+<view class="x-flex order_info" wx:if='{{data.status!=2}}'>
+  <view>物流公司：</view>
+  <view>{{data.company_name?data.company_name:'待发货'}}</view>
+</view>
+<view class="x-flex order_info" wx:if='{{data.status!=2}}'>
+  <view>快递单号：</view>
+  <view>{{data.express_number?data.express_number:'待发货'}}</view>
+</view>

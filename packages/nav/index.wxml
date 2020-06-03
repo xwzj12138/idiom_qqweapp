@@ -1,0 +1,4 @@
+<scroll-view scroll-x class="x-class x-bg-color x-color15 x-text-center nav" scroll-with-animation scroll-left="{{scrollLeft}}" enable-flex='true'>
+  <view class="x-item x-file-item {{index==TabCur?'x-color6 cur':''}}" wx:for="{{tabList}}" wx:key='nav_key' 
+    catchtap='tabSelect' data-index="{{index}}">{{item[key]}}</view>
+</scroll-view>

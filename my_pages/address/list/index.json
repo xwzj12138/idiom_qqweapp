@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "x-cell-group": "/packages/cell-group/index",
+    "x-cell": "/packages/cell/index",
+    "x-icon": "/packages/icon/index",
+    "x-tabbar": "/packages/tabbar/index",
+    "x-tabbar-flex-item": "/packages/tabbar-flex-item/index"
+  }
+}

@@ -1,0 +1,9 @@
+/* pages/share/help/index.wxss */
+.share_user_info{
+  text-align: center;
+  padding: 35px 10px 30px 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.share_user_info>view:nth-child(2){margin: 10px auto;}
+.share_user_info>view:nth-child(3){font-size: 11px;margin: 16px auto;}

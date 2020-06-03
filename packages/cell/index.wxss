@@ -1,0 +1,35 @@
+/* 将cell设为flex布局且内容居中显示 */
+@import '../common/index.wxss';
+.cell-item {
+  position: relative;
+}
+.x-btn{text-align: left;padding: 20rpx 30rpx;line-height: 1;}
+/* 设置底部分隔线最后一个不显示 */
+.cell-item-last::after{border:0;}
+/* 设置内边距 */
+.x-btn.arrow {
+  padding-right:70rpx;
+}
+/* 设置箭头 */
+.arrow::before {
+  font-family: "iconfont";
+  display: block;
+  content: "\e6a3";
+  position: absolute;
+  font-size: 34rpx;
+  color: #aaa;
+  line-height: 30rpx;
+  height: 30rpx;
+  width: 30rpx;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  right: 30rpx;
+  margin: auto;
+}
+.cell-icon{margin-right:5px;}
+.cell-icon:empty{display:none}
+.cell-bd{flex:1;word-break:break-all;}
+.cell-text{line-height:24px;font-size:14px}
+.cell-desc{line-height:1.2;font-size:12px;color:#80848f}
+.cell-ft{text-align:right;color:#495060;font-size: 14px;}

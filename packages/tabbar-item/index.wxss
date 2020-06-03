@@ -1,0 +1,2 @@
+@import '../common/index.wxss';
+.x-btn{line-height: 1.4;background: none !important;}

@@ -1,0 +1,3 @@
+.picker{padding:7px 15px;color:#495060;background: #fff;border-bottom: 1px solid #f3f3f3;display: flex;}
+.picker>view:first-child{flex: 1;}
+.inline_button{margin-left: 125rpx !important;}

@@ -1,0 +1,8 @@
+@import '../../../packages/common/index.wxss';
+.goods_image{width: 80px;height: 80px;border-radius: 6px;overflow: hidden;}
+.goods_title{color:#353535;font-size: 30rpx;font-weight:600;word-break: break-all;}
+.goods_info{padding:0 15rpx;height: 80px;}
+.goods_price_tag{font-size: 24rpx;margin-right:12px;}
+.goods_info .goods_price_tag:last-child{color:#FF9600;}
+.order_info{font-size: 24rpx;background: #fff;padding: 5px 10px;color: #353535;}
+.order_info>view:nth-child(1){width: 120rpx;}

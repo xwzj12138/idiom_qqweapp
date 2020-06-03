@@ -1,0 +1,6 @@
+/* my_pages/product/detail/index.wxss */
+.goods_detail_price{color: #FF9600;font-size: 42rpx;padding:0 0 4px 5px;}
+.goods_detail_price>text:last-child{color: #888888;text-decoration: line-through;font-size: 28rpx}
+.goods_title{color:#353535;font-size: 30rpx;font-weight:600;padding:28rpx 21rpx 15rpx 24rpx;word-break: break-all;}
+.postage{font-size: 28rpx;padding:28rpx 21rpx 15rpx 24rpx;color: #888888;border-top: 16rpx solid #f6f6f6;border-bottom: 16rpx solid #f6f6f6;}
+.address_bottom_view{margin: 15px;}

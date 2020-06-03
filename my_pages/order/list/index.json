@@ -1,0 +1,10 @@
+{
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 200,
+  "usingComponents": {
+    "x-loading": "/packages/loading/index",
+    "x-cell": "/packages/cell/index",
+    "x-cell-group": "/packages/cell-group/index",
+    "x-blank-hint": "/packages/blank-hint/index"
+  }
+}

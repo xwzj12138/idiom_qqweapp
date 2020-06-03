@@ -1,0 +1,12 @@
+.goods_image{width: 80px;height: 80px;border-radius: 6px;overflow: hidden;}
+.goods_title{color:#353535;font-size: 30rpx;font-weight:600;word-break: break-all;}
+.goods_info{padding:0 15rpx;height: 80px;}
+.goods_price_tag{font-size: 24rpx;}
+.goods_info .goods_price_tag:last-child{color:#FF9600;}
+.goods_info>view:last-child{font-size: 28rpx;margin-top: 15px;}
+.pay_cancel>text{font-size:24rpx;border-radius: 30rpx;padding:14rpx;margin-left:25rpx;}
+.pay_button{color:#FF9600;border:1px solid #FF9600;}
+.cancel_button{color:#666666;border: 1px solid #666666;}
+.goods_attr{font-size:30rpx;padding:5px 0 5px 0;display: flex;}
+.goods_attr>view:first-child{flex: 1;}
+.goods_attr text:last-child{color: #f00;font-size: 12px;margin-left: 5px;}

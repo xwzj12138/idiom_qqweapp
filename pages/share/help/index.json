@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "x-avatar": "/packages/avatar/index",
+    "x-button": "/packages/button/index"
+  }
+}

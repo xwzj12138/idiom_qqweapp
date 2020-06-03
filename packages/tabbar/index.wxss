@@ -1,0 +1,3 @@
+/* packages/goods-action/index.wxss */
+@import '../common/index.wxss';
+.x-flex>x-tabbar-flex-item{flex:1}

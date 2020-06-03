@@ -1,0 +1,17 @@
+<x-input value='{{form.consignee_name}}' name='consignee_name' title='收件人：' placeholder='请输入收件人' bind:change='inputChange'></x-input>
+
+<x-input value='{{form.consignee_tel}}' name='consignee_tel' title='收件人电话：' placeholder='请输入收件人电话' bind:change='inputChange'></x-input>
+
+<picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+  <view class="picker">
+    <view>{{form.province?'当前选择：':'请选择地址'}}{{form.province}}{{form.city}}{{form.county}}</view>
+    <view><x-icon name="right" size='46' ></x-icon></view>
+  </view>
+</picker>
+
+<x-input value='{{form.address}}' name='address' title='详细地址：' placeholder='请输入详细地址' bind:change='inputChange'></x-input>
+
+<view style='text-align: center;'>
+  <x-button bind:click="handleClick" bg_color='x-bg-color6' color='x-color' inline='{{form.id>0}}'>提交</x-button>
+  <x-button bind:click="delAddress" bg_color='x-bg-color3' color='x-color' inline type="warning" wx:if='{{form.id>0}}'x-class='inline_button'>删除</x-button>
+</view>

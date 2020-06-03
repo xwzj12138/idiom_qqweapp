@@ -1,0 +1,10 @@
+@import '../../../packages/common/index.wxss';
+page{background-color:#6739b6;}
+.idiom_body{width: 80%;margin: 10px auto;padding: 70px 20px;font-size: 24px;position: relative;}
+.idiom-item>view{border: 2px solid #fff;line-height: 122rpx;}
+.idiom_body>view:first-child{position: absolute;top: 0;right: 0;}
+.center_button_body{width: 90%;margin: 18px auto;border-radius: 30px;overflow: hidden;}
+.answer{width: 90%;margin: 25px auto;}
+.answer>view{margin-right: 10px;border: 2px solid #fff;line-height: 122rpx;font-size: 35px;}
+.answer>view:last-child{margin-right: 0;}
+.x-file-item:active{background:#f3f3f3;color: #333; }
