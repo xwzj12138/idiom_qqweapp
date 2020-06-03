@@ -22,7 +22,6 @@ export default new class address extends auth {
   }
   //设置默认地址
   setDefault(param, callback) {
-    console.log(param)
     this.request({ url: 'index/v1/address/setDefault', type: 'POST', data: param, sCallBack: (res) => { callback && callback(res); } })
   }
   //获取默认地址

@@ -1,7 +1,7 @@
 <!-- 用户信息 -->
 <x-cell-group>
   <x-cell wx:if="{{!userinfo.nickname && !userinfo.avatar}}">
-    <x-button inline openType='getUserInfo' bind:getuserinfo="updateUserInfo" shape='x-circle' size='45' bg_color='x-bg-color8' color='x-color'>授权登录</x-button>
+    <x-button inline openType='getUserInfo' bind:getuserinfo="updateUserInfo" shape='x-circle' size='45' bg_color='x-bg-color8' color='x-color'>授权登录兑换奖品</x-button>
   </x-cell>
   <x-cell wx:else title='{{userinfo.nickname}}' label='金币：{{userinfo.gold}}'>
     <x-avatar size='46' src='{{userinfo.avatar}}' slot='icon'></x-avatar>
